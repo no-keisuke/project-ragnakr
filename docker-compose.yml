@@ -6,3 +6,5 @@ services:
         - "./backend/:/app/"
     ports:
      - "5000:5000"
+  frontend:
+    build: ./frontend
