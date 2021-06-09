@@ -1,1 +1,3 @@
 flask
+pyrebase
+flask_cors
