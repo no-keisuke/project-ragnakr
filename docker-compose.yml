@@ -24,5 +24,6 @@ services:
     build: ./frontend
     volumes:
       - ./frontend/:/app/frontend/
+      - /app/frontend/ragnarok/node_modules
     ports:
       - "3000:3000"
