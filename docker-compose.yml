@@ -21,9 +21,11 @@ services:
     ports:
       - 13306:3306    
   frontend:
-    build: ./frontend
+    build: 
+      context: "."
+      dockerfile: "Dockerfile_react"
     volumes:
       - ./frontend/:/app/frontend/
-      - /app/frontend/ragnarok/node_modules
+      - /app/frontend/node_modules
     ports:
       - "3000:3000"
