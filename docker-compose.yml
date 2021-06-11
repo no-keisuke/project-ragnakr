@@ -8,3 +8,12 @@ services:
      - "5000:5000"
   frontend:
     build: ./frontend
+    volumes:
+      - ./frontend/:/app/frontend/
+    # portsはbackendとfrontendで分ける？
+    ports:
+      - "3000:3000"
+  # db:
+  #   build: ./db
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=password # 要変更
