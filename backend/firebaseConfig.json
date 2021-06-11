@@ -1,0 +1,10 @@
+{
+    "apiKey": "AIzaSyCkeQyPg3VGgtEE-zehfBD1l_6ph7WQbgQ",
+    "authDomain": "ragnarok-auth.firebaseapp.com",
+    "projectId": "ragnarok-auth",
+    "storageBucket": "ragnarok-auth.appspot.com",
+    "messagingSenderId": "1051750969266",
+    "appId": "1:1051750969266:web:f4e702a9eee08f65477eab",
+	"databaseURL": "https://ragnarok-auth-default-rtdb.firebaseio.com/",
+    "measurementId": "G-4PYWPQ2DX7"
+}
