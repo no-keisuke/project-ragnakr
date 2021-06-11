@@ -1,0 +1,16 @@
+# ベースイメージの作成
+FROM node:12.16.1-alpine
+# ディレクトリの作成 （なくてもいい？）
+RUN mkdir app
+RUN mkdir app/frontend
+# コンテナ内で作業するディレクトリを指定
+WORKDIR /app/frontend
+# package.json と package.lock を作業ディレクトリにコピー（ローカルからコンテナ内へ）
+COPY ["./frontend/package.json", "./frontend/package-lock.json", "/app/frontend"]
+# パッケージをインストール
+RUN npm install
+RUN npm install react-scripts
+# ファイルをすべて作業用ディレクトリにコピー（ローカルからコンテナ内へ）
+COPY ./frontend /app/frontend
+# コンテナを起動する際に実行するコマンド
+CMD [ "npm", "start" ]
