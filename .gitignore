@@ -1,0 +1,4 @@
+firebaseConfig.json
+serviceAccountKey.json
+mysql-error.log
+mysql/data
