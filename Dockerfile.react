@@ -6,7 +6,7 @@ RUN mkdir app/frontend
 # コンテナ内で作業するディレクトリを指定
 WORKDIR /app/frontend
 # package.json と package.lock を作業ディレクトリにコピー（ローカルからコンテナ内へ）
-COPY ["./frontend/package.json", "./frontend/package-lock.json", "/app/frontend"]
+COPY ["./frontend/package.json", "./frontend/package-lock.json", "/app/frontend/"]
 # パッケージをインストール
 RUN npm install
 RUN npm install react-scripts
