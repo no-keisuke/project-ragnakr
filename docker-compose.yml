@@ -9,9 +9,9 @@ services:
   backend_go:
     build: ./backend_go
     volumes: 
-          - "./backend_go/:/app"
+          - ./backend_go/:/app
     ports: 
-          - "8080:8080"
+          - 8080:8080
   db:
     image: mysql:8.0
     volumes:
@@ -25,13 +25,14 @@ services:
       - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASS}
       - TZ=${TZ}
     ports:
-      - 13306:3306    
+      - 13306:3306
   frontend:
-    build: 
-      context: "."
-      dockerfile: "Dockerfile_react"
+    build: ./frontend
     volumes:
-      - ./frontend/:/app/frontend/
-      - /app/frontend/node_modules
+      - ./frontend/:/app
+      - /app/node_modules
+      - ./frontend/logs:/root/.npm/_logs
     ports:
-      - "3000:3000"
+      - 3000:3000
+    tty: true
+
