@@ -4,3 +4,5 @@ mysql-error.log
 mysql/data
 tmp
 frontend/logs/*
+.vscode
+.DS_Store
