@@ -12,6 +12,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -23,20 +24,12 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
-  plugins: [
-    '@typescript-eslint',
-    'import',
-    'jsx-a11y',
-    'react',
-    'react-hooks',
-  ],
+  plugins: ['@typescript-eslint', 'import', 'jsx-a11y', 'react', 'react-hooks'],
   root: true,
   rules: {
     // occur error in `import React from 'react'` with react-scripts 4.0.1
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-    ],
+    '@typescript-eslint/no-use-before-define': ['error'],
     'lines-between-class-members': [
       'error',
       'always',
@@ -61,11 +54,11 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
-        'vars': 'all',
-        'args': 'after-used',
-        'argsIgnorePattern': '_',
-        'ignoreRestSiblings': false,
-        'varsIgnorePattern': '_',
+        vars: 'all',
+        args: 'after-used',
+        argsIgnorePattern: '_',
+        ignoreRestSiblings: false,
+        varsIgnorePattern: '_',
       },
     ],
     'import/extensions': [
@@ -96,8 +89,8 @@ module.exports = {
   },
   overrides: [
     {
-      'files': ['*.tsx'],
-      'rules': {
+      files: ['*.tsx'],
+      rules: {
         'react/prop-types': 'off',
       },
     },
