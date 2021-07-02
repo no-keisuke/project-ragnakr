@@ -24,8 +24,8 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
+  ignorePatterns: [".*lintrc.js"],
   plugins: ['@typescript-eslint', 'import', 'jsx-a11y', 'react', 'react-hooks'],
-  root: true,
   rules: {
     // occur error in `import React from 'react'` with react-scripts 4.0.1
     'no-use-before-define': 'off',
